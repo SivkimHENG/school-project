@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import Footer from "../component/Footer.jsx"
 
 
-//TODO: Meal of the week for the api mealdb
+//TODO:  Modal for the Card Body
 export default function Home() {
   const [meals, setMeal] = useState(null);
   const [ingredients, setIngredients] = useState(null);
@@ -112,17 +112,17 @@ export default function Home() {
                         {ingredients ? (
                             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                                 {ingredients.map((ingredient) => {
-                                    const ingredientName = ingredient.strIngredient;
-                                    const imageUrl = `https://www.themealdb.com/images/ingredients/${ingredientName}.png`;
+                                    const ingredientNames = ingredient.strIngredient;
+                                    const imageUrl = `https://www.themealdb.com/images/ingredients/${ingredientNames}.png`;
                                     return (
-                                        <Card key={ingredientName} className="w-full">
+                                        <Card key={ingredientNames} className="w-full">
                                             <Card.Image
                                                 src={imageUrl}
-                                                alt={ingredientName}
+                                                alt={ingredientNames}
                                                 className="h-72 object-cover"
                                             />
                                             <Card.Title className="text-2xl font-bold flex justify-center mt-4 pb-10">
-                                                {ingredientName}
+                                                {ingredientNames}
                                             </Card.Title>
                                         </Card>
                                     );
