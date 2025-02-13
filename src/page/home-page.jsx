@@ -4,7 +4,6 @@ import Card from "../component/ui/card.jsx";
 import { Link } from "react-router-dom";
 import Footer from "../component/Footer.jsx"
 
-
 //TODO:  Modal for the Card Body
 export default function Home() {
   const [meals, setMeal] = useState(null);
